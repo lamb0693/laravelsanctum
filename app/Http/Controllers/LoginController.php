@@ -40,8 +40,8 @@ class LoginController extends Controller
         $user = User::where('email', '=', $request->email)->first();
 
         return response()->json([
-            'access_token' => $user->createToken('api-token')->plainTextToken,
-            'type' => 'bearer',
+            // 'access_token' => $user->createToken('api-token')->plainTextToken,
+            // 'type' => 'bearer',
             'success' => 'ok'
         ]);
     }
@@ -56,8 +56,8 @@ class LoginController extends Controller
         $user = User::where('email', '=', $request->email)->first();
 
         return response()->json([
-            'access_token' => $user->createToken('api-token')->plainTextToken,
-            'type' => 'bearer',
+//            'access_token' => $user->createToken('api-token')->plainTextToken,
+//            'type' => 'bearer',
 
             'message' => 'login success'
         ]);
