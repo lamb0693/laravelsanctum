@@ -46,6 +46,10 @@ class LoginController extends Controller
         ]);
     }
 
+    public function logout(){
+        Auth::guard('web')->logout();
+    }
+
     public function register(Request $request){
         if(!Auth::attempt(request()->only('email', 'password'))) {
             return response()->json([
